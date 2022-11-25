@@ -1,0 +1,22 @@
+Numerical Features: age , trestbps , chol , thalach , oldpeak 
+Categorical Features: sex , cp , fbs , restecg , exang , slope , ca , thal 
+Output Feature: target 
+
+
+1: https://www.kaggle.com/code/asmaabdolahpoor/heartdisease-eda-visualization
+
+2. https://www.kaggle.com/code/nareshbhat/eda-classification-ensemble-92-accuracy
+
+3. https://www.kaggle.com/code/nareshbhat/heart-attack-prediction-using-different-ml-models
+
+4. https://www.kaggle.com/code/madhvi1811/heartdiseaseanalysis
+
+5. https://www.kaggle.com/code/maujmishra/heart-disease-dataset-eda
+
+6. https://www.kaggle.com/code/gladerunner/heart-disease-prediction-comparative-analysis
+
+7. https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/code?datasetId=216167&sortBy=voteCount
+
+Model: 
+
+1. https://www.kaggle.com/code/akashkotal/heart-disease-eda-with-7-machine-learning-model

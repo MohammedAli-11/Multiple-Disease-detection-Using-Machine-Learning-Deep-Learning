@@ -1,0 +1,22 @@
+1) cp = chest pain || 4 = abnormal, 3 = asymptomatic, angina = 2
+
+2) trestbps = resting blood pressure ????94-200
+
+3) chol = serum cholestoral mg/dl || LDL = <130 HDL = > 55;45 m  triglycerides = <150
+
+4) fbs = fasting blood sugar || diabetes or not
+
+5) restecg = resting electrocardiographic results || 0 = norm, 1 = abnormal, 2 = hyper
+
+6) thalach = maximum heart rate || 220 - age
+
+7) exang = exercise induced angina || yes or no
+
+8) oldpeak = ST depression induced by exercise relative to test || <0.5 mm (0-6.2)
+
+9) slope = slope of the peak exercise ST segment || 1 = up, 2 = flat, 3 = down
+
+10) ca = number of major vessels colored by floursopy || 
+
+11) thal = 0 = normal; 1 = fixed defect; 2 = reversable defect
+

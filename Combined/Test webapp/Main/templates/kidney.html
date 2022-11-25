@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <title>Kidney Disease Test</title>
+</head>
+
+<body>
+    <!-- Java Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Get Your Kidney Disease Prediction</span>
+    </nav>
+    <div class="container ">
+        <br />
+        <!--Form-->
+        <form action="{{url_for('predictKidney')}}" method="POST">
+            <fieldset>
+                <legend>Enter The Following Values:</legend>
+                <br />
+                <div class="card card-body">
+                    <div class="form-group row">
+
+                        <!-- div-1 -->
+                        <div class="col-sm-3">
+
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" name="age" required />
+
+                            <label for="bp">Blood Pressure</label>
+                            <input type="number" class="form-control" id="bp" name="bp" required />
+
+
+                            <label for="sugar">Sugar</label>
+                            <input type="number" step="any" class="form-control" id="sugar" name="sugar" required />
+
+                            <label for="pc">Pus Cell</label>
+                            <select class="form-control" id="pc" name="pc" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Normal</option>
+                                <option value="1">Abnormal</option>
+
+                            </select>
+
+                            <label for="ba">Bacteria</label>
+                            <select class="form-control" id="ba" name="ba" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Present</option>
+                                <option value="1">Not Present</option>
+
+                            </select>
+
+                            <label for="bgr">Blood Glucose Random</label>
+                            <input type="number" step="any" class="form-control" id="bgr" name="bgr" required />
+
+                            <label for="sc">Serum Creatinine</label>
+                            <input type="number" step="any" class="form-control" id="sc" name="sc" required />
+
+                            <label for="hemo">Hemoglobin</label>
+                            <input type="number" step="any" class="form-control" id="hemo" name="hemo" required />
+                        </div>
+
+                        <!-- div-2 -->
+                        <div class="col-sm-3">
+                            <label for="pcv">Packed Cell Volume</label>
+                            <input type="number" step="any" class="form-control" id="pcv" name="pcv" required />
+
+                            <label for="wc">White Blood Cell Count</label>
+                            <input type="number" step="any" class="form-control" id="wc" name="wc" required />
+
+                            <label for="rc">Red Blood Cell Count</label>
+                            <input type="number" step="any" class="form-control" id="rc" name="rc" required />
+
+                            <label for="htn">Hypertension</label>
+                            <select class="form-control" id="htn" name="htn" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+
+                            </select>
+
+                            <label for="dm">Diabetes Mellitus</label>
+                            <select class="form-control" id="dm" name="dm" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+
+                            </select>
+
+                            <label for="ckd">Coronary Artery Disease</label>
+                            <select class="form-control" id="ckd" name="ckd" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+
+                            </select>
+
+                            <label for="pe">Pedal Edema</label>
+                            <select class="form-control" id="pe" name="pe" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+
+                            </select>
+                            <label for="ane">Anemia</label>
+                            <select class="form-control" id="ane" name="ane" required>
+                                <option disabled selected value>
+                                    -- Select an Option --
+                                </option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3  d-flex align-items-center justify-content-center">
+                            <br>
+                            <div>
+                                <div>
+                                    <input class="btn btn-primary" type="submit" value="Result" />
+                                </div>
+
+                                <!--Prediction Result-->
+                                <div id="result">
+                                    <strong style="color: red">{{result}}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
